@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def uppercase(str):
-    if ord(str) >= 65 and ord(str) <= 90:
-        return str(i)
-
-
-
-print(uppercase('best'))
+    result = ""
+    for c in str:
+        if 'a' <= c <= 'z':
+            result += chr(ord(c) - 32)
+        else:
+            result += c
+    print("{}".format(result))
