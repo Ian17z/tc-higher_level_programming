@@ -4,8 +4,7 @@ def islower(c):
         return True
     else:
         return False
-print(islower('a'))
-print(islower('H'))
-print(islower('A'))
-print(islower('3'))
-print(islower('g'))
+if islower('a') == True:
+    print('{} is {}'.format('a', 'lower'))
+else:
+    print('{} is {}'.format('a', 'upper'))
