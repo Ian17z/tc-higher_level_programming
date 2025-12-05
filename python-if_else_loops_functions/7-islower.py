@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 def islower(c):
-    if c >= 'a' and c <= 'z':
+    if ord(c) >= 97 and ord(c) < 123:
         return True
-    return False
-print(islower('a'))  # True
-print(islower('Z'))  # False
-print(islower('m'))  # True
-print(islower('1'))  # False
+    else:
+        return False
+print(islower('a'))
+print(islower('H'))
+print(islower('A'))
+print(islower('3'))
+print(islower('g'))
