@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    funciona = 0
+    num = 0
     for i in range(x):
         try:
-            print("{:d}".format(my_list[i]), end=" ")
-            funciona += 1
-        except (ValueError, TypeError, IndexError):
-            continue
+            valor = my_list[i]
+            if type(valor) is int:
+                print("{:d}".format(valor), end="")
+                num += 1
+        except IndexError:
+            break
     print()
-    return funciona
+    return num
