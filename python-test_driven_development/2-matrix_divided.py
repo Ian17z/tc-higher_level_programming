@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+'''
+Este módulo é capaz de dividir cada número dentro da matriz
+'''
 def matrix_divided(matrix, div):
-    '''Divisão de matrizes.'''
+    '''
+    Divisão de matrizes.
+    '''
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number") 
     if div == 0:

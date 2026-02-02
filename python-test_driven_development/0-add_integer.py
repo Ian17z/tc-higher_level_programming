@@ -6,7 +6,7 @@ def add_integer(a, b=98):
     '''
     Try: Soma dois números inteiros ou flutuantes.
     
-    Execept: Caso a ou b não se enquadrem na função
+    Execept: Caso a ou b não se enquadrem na função.
     '''
     if type(a) not in (int, float):
         raise TypeError("a must be an integer")
