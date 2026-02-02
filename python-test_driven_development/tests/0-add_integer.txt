@@ -1,0 +1,58 @@
+Importing the function:
+>>> add_integer = __import__('add_integer').add_integer
+
+Basic cases:
+>>> add_integer(1, 2)
+3
+>>> add_integer(10, 20)
+30
+>>> add_integer(-5, -3)
+-8
+>>> add_integer(-5, 3)
+-2
+
+Default value of b:
+>>> add_integer(2)
+100
+>>> add_integer(0)
+98
+
+Float handling:
+>>> add_integer(3.7, 2)
+5
+>>> add_integer(3, 2.9)
+5
+>>> add_integer(3.9, 2.1)
+5
+
+Mixed types:
+>>> add_integer(5, 2.0)
+7
+>>> add_integer(5.0, 2)
+7
+
+Large numbers:
+>>> add_integer(1000000, 2000000)
+3000000
+
+Type errors for a:
+>>> add_integer("1", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Type errors for b:
+>>> add_integer(1, "2")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(1, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
