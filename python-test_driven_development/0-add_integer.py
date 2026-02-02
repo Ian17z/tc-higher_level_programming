@@ -8,14 +8,8 @@ def add_integer(a, b=98):
     
     Execept: Caso a ou b não se enquadrem na função
     '''
-    try:
-        a = int(a)
-    except (TypeError, ValueError):
+    if type(a) not in (int, float):
         raise TypeError("a must be an integer")
-
-    try:
-        b = int(b)
-    except (TypeError, ValueError):
+    if type(b) not in (int, float):
         raise TypeError("b must be an integer")
-
-    return a + b
+    return int(a) + int(b)
