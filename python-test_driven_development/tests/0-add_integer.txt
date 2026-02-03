@@ -1,4 +1,6 @@
 TDD
+>>> import sys
+>>> sys.path.append("..")
 >>> add_integer = __import__('add_integer').add_integer
 >>> add_integer(2, 3)
 5
