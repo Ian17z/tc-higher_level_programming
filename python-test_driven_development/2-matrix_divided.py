@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Este módulo é capaz de dividir cada número dentro da matriz
+Este módulo é capaz de dividir cada número dentro da matriz.
 '''
 def matrix_divided(matrix, div):
     '''
