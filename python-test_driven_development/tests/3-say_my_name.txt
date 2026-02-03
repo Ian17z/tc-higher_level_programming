@@ -1,0 +1,30 @@
+=====================
+Testando say_my_name
+=====================
+
+Função:
+>>> say_my_name = __import__('say_my_name').say_my_name
+
+Primeiro nome:
+>>> say_my_name("John")
+My name is John 
+
+Último nome:
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+Ùltimo nome vazio:
+>>> say_my_name("John", "")
+My name is John 
+
+Primeiro nome não é string:
+>>> say_my_name(12, "Smith")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+Último nome não string:
+>>> say_my_name("John", 12)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
