@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 from functools import reduce
+from functools import reduce
 def calc_average(a_dictionary):
-    valores = a_dictionary.valores()
+    values = a_dictionary.values()
     n = len(a_dictionary)
-    totalidade = reduce(lambda acc, emp: acc + emp["age"], valores, 0)
-    totalsalario = reduce(lambda acc, emp: acc + emp["salary"], valores, 0)
-    mediaidade = totalidade / n
-    averagesalario = totalsalario / n
+    total_age = reduce(lambda acc, emp: acc + emp["age"], values, 0)
+    total_salary = reduce(lambda acc, emp: acc + emp["salary"], values, 0)
+    avg_age = total_age / n
+    avg_salary = total_salary / n
+    print(f"The average salary is R${avg_salary:.2f} with an average age of {avg_age:.2f}")
