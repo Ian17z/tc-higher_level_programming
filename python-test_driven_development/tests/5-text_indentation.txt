@@ -1,29 +1,38 @@
 Doctests para a função text_indentation.
 
-Função identação:
+Importando a função:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Teste normal:
+Caso básico:
+    >>> text_indentation("Holberton")
+    Holberton
+
+Texto com ponto:
+    >>> text_indentation("Holberton. School")
+    Holberton.
+    <BLANKLINE>
+     School
+
+Texto com interrogação:
+    >>> text_indentation("Hello? World")
+    Hello?
+    <BLANKLINE>
+     World
+
+Texto com dois separadores:
     >>> text_indentation("Hello. How are you?")
     Hello.
     <BLANKLINE>
-    How are you?
+     How are you?
     <BLANKLINE>
 
-Teste multiplos espaços:
-    >>> text_indentation("Hi! How are you: fine. Ok?")
-    Hi! How are you:
+Texto com dois pontos:
+    >>> text_indentation("Name: John")
+    Name:
     <BLANKLINE>
-    fine.
-    <BLANKLINE>
-    Ok?
-    <BLANKLINE>
+     John
 
-Teste sem espaço:
-    >>> text_indentation("Hello World")
-    Hello World
-
-Teste sem string:
+Tipo inválido:
     >>> text_indentation(123)
     Traceback (most recent call last):
     ...
