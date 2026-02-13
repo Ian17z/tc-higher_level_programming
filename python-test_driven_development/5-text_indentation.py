@@ -5,18 +5,17 @@ Printa um texto com 2 novas linhas a cada ., ? ou : na frase digitada.
 
 
 def text_indentation(text):
-    if type(text) is not str:
-        raise TypeError("Deverá ser uma string")
+    '''
+    A cada ., ? ou : é gerada 2 novas linhas.
 
-    espaco = False
+    Se não, é necessário digitar uma string ou algo
+    '''
+    if type(text) is not str:
+        raise TypeError("DEVE SER STRING")
 
     for char in text:
-        if espaco and char == " ":
-            continue
-
-        espaco = False
-        print(char, end="")
-
         if char in ".?:":
-            print("\n")
-            espaco = True
+            print(char)
+            print()
+        else:
+            print(char, end="")
