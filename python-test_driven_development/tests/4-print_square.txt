@@ -23,4 +23,4 @@ Teste size negative:
     ValueError: size must be >= 0
 
 Teste size not integer:
-    >>> print_squa_
+    >>> print_square
