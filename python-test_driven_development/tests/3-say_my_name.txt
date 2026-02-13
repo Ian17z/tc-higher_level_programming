@@ -1,9 +1,7 @@
-=====================
-Testando say_my_name
-=====================
+Doctests para say_my_name.
 
 Função:
->>> say_my_name = __import__('say_my_name').say_my_name
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Primeiro nome:
 >>> say_my_name("John")
