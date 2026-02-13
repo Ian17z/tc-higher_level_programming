@@ -1,28 +1,45 @@
-import pytest
-from 0-add_integer.py import add_integer
+===============================
+Como usar o módulo add_integer
+===============================
 
-def test_soma_inteiros_basica():
-    assert add_integer(1, 2) == 3
+Importando a função:
+    >>> add_integer = __import__('0-add_integer').add_integer
 
-def test_soma_com_valor_padrao():
-    assert add_integer(2) == 100
+Casos básicos de soma:
+    >>> add_integer(1, 2)
+    3
+    >>> add_integer(100, -2)
+    98
+    >>> add_integer(2)
+    100
 
-def test_conversao_de_float_para_int():
-    assert add_integer(4.7, 5.2) == 9
+Lidando com números decimais (Floats):
+    >>> add_integer(100.3, -2)
+    98
+    >>> add_integer(89.9, 1)
+    90
+    >>> add_integer(4.2, 5.9)
+    9
 
-def test_erro_quando_a_nao_e_numero():
-    with pytest.raises(TypeError, match="a must be an integer"):
-        add_integer("1", 2)
+Lidando com erros de tipo (a):
+    >>> add_integer("4", 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
 
-def test_erro_quando_b_nao_e_numero():
-    with pytest.raises(TypeError, match="b must be an integer"):
-        add_integer(1, [2])
+Lidando com erros de tipo (b):
+    >>> add_integer(1, [1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
 
-@pytest.mark.parametrize("a, b, esperado", [
-    (0, 0, 0),
-    (-1, 1, 0),
-    (-5, -5, -10),
-    (100.9, 1, 101),  # int(100.9) é 100
-])
-def test_diversos_cenarios(a, b, esperado):
-    assert add_integer(a, b) == esperado
+Valores nulos ou infinitos:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(float('inf'), 4)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
