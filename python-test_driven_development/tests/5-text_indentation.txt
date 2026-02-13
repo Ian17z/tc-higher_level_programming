@@ -3,37 +3,36 @@ Doctests para a função text_indentation.
 Importando a função:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Caso básico:
-    >>> text_indentation("Holberton")
-    Holberton
-
-Texto com ponto:
+Teste simples com ponto:
     >>> text_indentation("Holberton. School")
     Holberton.
     <BLANKLINE>
-     School
+    School
+    <BLANKLINE>
 
-Texto com interrogação:
+Teste com interrogação:
     >>> text_indentation("Hello? World")
     Hello?
     <BLANKLINE>
-     World
+    World
+    <BLANKLINE>
 
-Texto com dois separadores:
+Teste com múltiplas pontuações:
     >>> text_indentation("Hello. How are you?")
     Hello.
     <BLANKLINE>
-     How are you?
+    How are you?
     <BLANKLINE>
 
-Texto com dois pontos:
+Teste com dois pontos:
     >>> text_indentation("Name: John")
     Name:
     <BLANKLINE>
-     John
+    John
+    <BLANKLINE>
 
-Tipo inválido:
-    >>> text_indentation(123)
+Erro quando não é string:
+    >>> text_indentation(89)
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
