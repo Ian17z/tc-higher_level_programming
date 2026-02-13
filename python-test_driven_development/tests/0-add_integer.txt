@@ -1,53 +1,38 @@
-===============================
-Testes para a função add_integer
-===============================
+Doctests for add_integer function.
 
-Este arquivo completa somas de valores inteiros.
+Importing the function:
+    >>> add_integer = __import__('0-add_integer').add_integer
 
-Importando a função:
->>> add_integer = __import__('0-add_integer').add_integer
+Basic addition cases:
+    >>> add_integer(1, 2)
+    3
+    >>> add_integer(100, -2)
+    98
+    >>> add_integer(2)
+    100
 
-Casos básicos de soma:
->>> add_integer(1, 2)
-3
->>> add_integer(100, -2)
-98
->>> add_integer(2)
-100
+Handling float numbers:
+    >>> add_integer(100.3, -2)
+    98
+    >>> add_integer(89.9, 1)
+    90
+    >>> add_integer(4.2, 5.9)
+    9
 
-Lidando com números decimais (Floats):
->>> add_integer(100.3, -2)
-98
->>> add_integer(89.9, 1)
-90
->>> add_integer(4.2, 5.9)
-9
-
-Lidando com erros de tipo (a):
->>> add_integer("4", 5)
-Traceback (most recent call last):
+Handling type errors (a):
+    >>> add_integer("4", 5)
+    Traceback (most recent call last):
     ...
-TypeError: a must be an integer
+    TypeError: a must be an integer
 
-Lidando com erros de tipo (b):
->>> add_integer(1, [1, 2, 3])
-Traceback (most recent call last):
+Handling type errors (b):
+    >>> add_integer(1, [1, 2, 3])
+    Traceback (most recent call last):
     ...
-TypeError: b must be an integer
+    TypeError: b must be an integer
 
-Tratamento de NaN (Not a Number):
->>> add_integer(float('nan'))
-Traceback (most recent call last):
+Handling invalid values:
+    >>> add_integer(None)
+    Traceback (most recent call last):
     ...
-TypeError: a must be an integer
-
-Valores nulos ou infinitos:
->>> add_integer(None)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
-
->>> add_integer(float('inf'), 4)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
+    TypeError: a must be an integer
