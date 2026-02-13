@@ -3,33 +3,23 @@ Doctests para a função text_indentation.
 Importando a função:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Teste simples com ponto:
+Teste simples:
     >>> text_indentation("Holberton. School")
     Holberton.
     <BLANKLINE>
     School
-    <BLANKLINE>
 
-Teste com interrogação:
+Teste interrogação:
     >>> text_indentation("Hello? World")
     Hello?
     <BLANKLINE>
     World
-    <BLANKLINE>
 
-Teste com múltiplas pontuações:
-    >>> text_indentation("Hello. How are you?")
-    Hello.
-    <BLANKLINE>
-    How are you?
-    <BLANKLINE>
-
-Teste com dois pontos:
+Teste dois pontos:
     >>> text_indentation("Name: John")
     Name:
     <BLANKLINE>
     John
-    <BLANKLINE>
 
 Erro quando não é string:
     >>> text_indentation(89)

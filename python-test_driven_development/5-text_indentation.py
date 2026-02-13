@@ -40,7 +40,7 @@ def text_indentation(text):
         print(char, end="")
 
         if char in ".?:":
-            print("\n", end="")
+            print("\n")
             start = True
         else:
             start = False
