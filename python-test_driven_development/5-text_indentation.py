@@ -2,6 +2,8 @@
 """
 Printa um texto com 2 novas linhas a cada ., ? ou : na frase digitada.
 """
+
+
 def text_indentation(text):
     '''
     A cada ., ? ou : é gerada 2 novas linhas.

@@ -1,32 +1,30 @@
-========================
-Testando text_indentation
-========================
+Doctests para a função text_indentation.
 
 Função identação:
->>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Teste normal:
->>> text_indentation("Hello. How are you?")
-Hello.
-<BLANKLINE>
- How are you?
-<BLANKLINE>
+    >>> text_indentation("Hello. How are you?")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
 
 Teste multiplos espaços:
->>> text_indentation("Hi! How are you: fine. Ok?")
-Hi! How are you:
-<BLANKLINE>
- fine.
-<BLANKLINE>
- Ok?
-<BLANKLINE>
+    >>> text_indentation("Hi! How are you: fine. Ok?")
+    Hi! How are you:
+    <BLANKLINE>
+    fine.
+    <BLANKLINE>
+    Ok?
+    <BLANKLINE>
 
 Teste sem espaço:
->>> text_indentation("Hello World")
-Hello World
+    >>> text_indentation("Hello World")
+    Hello World
 
 Teste sem string:
->>> text_indentation(123)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
