@@ -1,28 +1,26 @@
-========================
-Testando print_square
-========================
+Doctests para print_square.
 
 Função quadrado:
->>> print_square = __import__('4-print_square').print_square
+    >>> print_square = __import__('4-print_square').print_square
 
 Teste size 1:
->>> print_square(1)
-#
+    >>> print_square(1)
+    #
 
 Teste size 3:
->>> print_square(3)
-###
-###
-###
+    >>> print_square(3)
+    ###
+    ###
+    ###
 
 Teste size 0:
->>> print_square(0)
+    >>> print_square(0)
 
 Teste size negative:
->>> print_square(-1)
-Traceback (most recent call last):
-...
-ValueError: size must be >= 0
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
 
 Teste size not integer:
->>> print_squa_
+    >>> print_squa_

@@ -2,6 +2,8 @@
 '''
 Este módulo cria um quadrado.
 '''
+
+
 def print_square(size):
     '''
     size calcula o tamanho do quadrado somente se for inteiro e maior que zero.
