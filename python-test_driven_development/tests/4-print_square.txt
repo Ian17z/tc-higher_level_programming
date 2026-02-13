@@ -1,26 +1,24 @@
-Doctests para print_square.
+Doctests para função print_square.
 
-Função quadrado:
+Importando a função:
     >>> print_square = __import__('4-print_square').print_square
 
-Teste size 1:
-    >>> print_square(1)
-    #
+Quadrado tamanho 2:
+    >>> print_square(2)
+    ##
+    ##
 
-Teste size 3:
-    >>> print_square(3)
-    ###
-    ###
-    ###
-
-Teste size 0:
+Quadrado tamanho 0:
     >>> print_square(0)
 
-Teste size negative:
+Size inválido (string):
+    >>> print_square("2")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Size negativo:
     >>> print_square(-1)
     Traceback (most recent call last):
     ...
     ValueError: size must be >= 0
-
-Teste size not integer:
-    >>> print_square
