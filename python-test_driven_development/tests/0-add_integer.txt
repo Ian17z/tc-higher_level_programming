@@ -33,6 +33,12 @@ Lidando com erros de tipo (b):
         ...
     TypeError: b must be an integer
 
+Tratamento de NaN (Not a Number):
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+    
 Valores nulos ou infinitos:
     >>> add_integer(None)
     Traceback (most recent call last):
