@@ -3,6 +3,7 @@
 Modulo divide todos os elementos da matriz.
 """
 
+
 def matrix_divided(matrix, div):
     """
     Divide todos os elementos.
