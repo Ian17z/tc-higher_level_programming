@@ -1,15 +1,37 @@
 #!/usr/bin/python3
-'''
-Este módulo devolve uma função que é capaz de fazer a soma inteira de dois números inteiros ou flutuantes.
-'''
+"""
+Module that contains function add_integer.
+"""
+
+
 def add_integer(a, b=98):
-    '''
-    Try: Soma dois números inteiros ou flutuantes.
-    
-    Execept: Caso a ou b não se enquadrem na função.
-    '''
-    if type(a) not in (int, float):
+    """
+    Adds two integers.
+
+    a and b must be integers or floats.
+    If a or b is a float, it is converted to an integer.
+
+    Raises:
+        TypeError: If a or b is not an integer or float.
+
+    Returns:
+        The integer addition of a and b.
+
+    Examples:
+        >>> add_integer(1, 2)
+        3
+        >>> add_integer(100, -2)
+        98
+        >>> add_integer(2)
+        100
+        >>> add_integer(4.2, 5.9)
+        9
+    """
+
+    if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-    if type(b) not in (int, float):
+
+    if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
+
     return int(a) + int(b)
