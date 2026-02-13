@@ -1,26 +1,28 @@
->>> from 0-add_integer import add_integer
+import pytest
+from 0-add_integer.py import add_integer
 
->>> add_integer(1, 2)
-3
+def test_soma_inteiros_basica():
+    assert add_integer(1, 2) == 3
 
->>> add_integer(100)
-198
+def test_soma_com_valor_padrao():
+    assert add_integer(2) == 100
 
->>> add_integer(2.5, 3.3)
-5
+def test_conversao_de_float_para_int():
+    assert add_integer(4.7, 5.2) == 9
 
->>> add_integer(-4, 5)
-1
+def test_erro_quando_a_nao_e_numero():
+    with pytest.raises(TypeError, match="a must be an integer"):
+        add_integer("1", 2)
 
->>> add_integer(3, -2)
-1
+def test_erro_quando_b_nao_e_numero():
+    with pytest.raises(TypeError, match="b must be an integer"):
+        add_integer(1, [2])
 
->>> add_integer("3", 5)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
->>> add_integer(3, "5")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+@pytest.mark.parametrize("a, b, esperado", [
+    (0, 0, 0),
+    (-1, 1, 0),
+    (-5, -5, -10),
+    (100.9, 1, 101),  # int(100.9) é 100
+])
+def test_diversos_cenarios(a, b, esperado):
+    assert add_integer(a, b) == esperado
