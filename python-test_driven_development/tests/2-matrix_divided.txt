@@ -34,10 +34,6 @@ Divisor inválido:
     ...
     TypeError: div must be a number
 
-Todos os valores iguais a zero:
-    >>> matrix_divided([[0, 0, 0], [0, 0, 0]], 5)
-    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
-
 Faltando um argumento:
     >>> matrix_divided([[1, 2], [3, 4]])
     Traceback (most recent call last):
@@ -49,3 +45,7 @@ Faltando dois argumentos:
     Traceback (most recent call last):
     ...
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Divisor infinito com valores variados:
+    >>> matrix_divided([[10, -5], [3, 8]], float('inf'))
+    [[0.0, -0.0], [0.0, 0.0]]
