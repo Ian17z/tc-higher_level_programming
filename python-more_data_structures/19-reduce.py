@@ -3,18 +3,27 @@ from functools import reduce
 
 def calc_average(a_dictionary):
     """
-    Calcula a média dos salários e idades de uma lista de dicionários
+    Recebe uma lista de dicionários com as chaves 'age' e 'salary'
+    e imprime a média dos valores dessas chaves.
     """
-    try:
-        # Soma todos os salários usando reduce
-        total_salary = reduce(lambda acc, person: acc + person['salary'], a_dictionary, 0)
-        
-        # Soma todas as idades usando reduce
-        total_age = reduce(lambda acc, person: acc + person['age'], a_dictionary, 0)
-        
-        # Calcula as médias
-        n = len(a_dictionary)
-        return (total_salary / n, total_age / n)
-    except:
-        # Se algo der errado, retorna (0, 0)
-        return (0, 0)
+    if not a_dictionary:
+        print("Lista vazia.")
+        return
+    
+    # Soma de ages
+    total_age = reduce(lambda acc, d: acc + d['age'], a_dictionary, 0)
+    # Soma de salaries
+    total_salary = reduce(lambda acc, d: acc + d['salary'], a_dictionary, 0)
+    
+    average_age = total_age / len(a_dictionary)
+    average_salary = total_salary / len(a_dictionary)
+    
+    print(f'The average salary is R${average_salary:0.2f} with an average age of {average_age}')
+
+data = [
+    {'name': 'Alice', 'age': 50, 'salary': 5000},
+    {'name': 'Bob', 'age': 30, 'salary': 7000},
+    {'name': 'Charlie', 'age': 35, 'salary': 9000},
+    {'name': 'Dave', 'age': 40, 'salary': 11000},
+    ]
+calc_average(data)
