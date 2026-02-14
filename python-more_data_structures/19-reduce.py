@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 from functools import reduce
+
 def calc_average(a_dictionary):
     if not a_dictionary:
         return 0, 0
+
+    # O segredo é o terceiro argumento: {'age': 0, 'salary': 0}
+    # Isso garante que 'acc' seja SEMPRE um dicionário desde o início
     somas = reduce(
         lambda acc, curr: {
             'age': acc['age'] + curr.get('age', 0),
@@ -12,9 +16,5 @@ def calc_average(a_dictionary):
         {'age': 0, 'salary': 0}
     )
 
-    total_itens = len(a_dictionary)
-    
-    avg_age = somas['age'] / total_itens
-    avg_salary = somas['salary'] / total_itens
-
-    return avg_salary, avg_age
+    n = len(a_dictionary)
+    return (somas['salary'] / n, somas['age'] / n)
