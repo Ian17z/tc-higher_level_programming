@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 from functools import reduce
 
 def calc_average(a_list_of_dictionaries):
